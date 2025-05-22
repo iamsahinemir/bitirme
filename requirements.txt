@@ -1,0 +1,10 @@
+transformers
+torch
+sentence-transformers
+faiss-cpu
+pandas
+python-dateutil
+peft
+gradio>=4.27.0
+bitsandbytes>=0.42.0
+
