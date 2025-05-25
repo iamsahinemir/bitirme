@@ -1,0 +1,226 @@
+Soru No,Soru,Cevap,Doğru Cevap
+1,Makinenin en fazla arıza yaptığı tarih aralığını verebilir misin?,2023-05-03 05:54 ile 2023-05-03 17:21 arasında,
+1,Makinenin en fazla arıza yaptığı tarih aralığını söyler misin?,2023-05-03 05:54 ile 2023-05-03 17:21 arasında,
+1,Makinenin en fazla arıza yaptığı tarih aralığını belirtir misin?,2023-05-03 05:54 ile 2023-05-03 17:21 arasında,
+1,Makinenin en fazla arıza yaptığı tarih aralığını açıklayabilir misin?,2023-05-03 05:54 ile 2023-05-03 17:21 arasında,
+1,Makinenin en fazla arıza yaptığı tarih aralığını paylaşır mısın?,2023-05-03 05:54 ile 2023-05-03 17:21 arasında,
+2,Geçmişte sarı alarm seviyesinde en çok hangi tarihlerde görüldü verebilir misin?,2023-01-24,
+2,Geçmişte sarı alarm seviyesinde en çok hangi tarihlerde görüldü söyler misin?,2023-01-24,
+2,Geçmişte sarı alarm seviyesinde en çok hangi tarihlerde görüldü belirtir misin?,2023-01-24,
+2,Geçmişte sarı alarm seviyesinde en çok hangi tarihlerde görüldü açıklayabilir misin?,2023-05-03,
+2,Geçmişte sarı alarm seviyesinde en çok hangi tarihlerde görüldü paylaşır mısın?,2023-05-03,
+3,Geçmişte kırmızı alarm seviyesinde en çok hangi tarihlerde görüldü verebilir misin?,2023-05-03,
+3,Geçmişte kırmızı alarm seviyesinde en çok hangi tarihlerde görüldü söyler misin?,2023-05-03,
+3,Geçmişte kırmızı alarm seviyesinde en çok hangi tarihlerde görüldü belirtir misin?,2023-05-03,
+3,Geçmişte kırmızı alarm seviyesinde en çok hangi tarihlerde görüldü açıklayabilir misin?,2023-05-03,
+3,Geçmişte kırmızı alarm seviyesinde en çok hangi tarihlerde görüldü paylaşır mısın?,2023-05-03,
+4,Makine performansındaki dalgalanmalar hakkında bilgi verebilir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+4,Makine performansındaki dalgalanmalar hakkında bilgi söyler misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+4,Makine performansındaki dalgalanmalar hakkında bilgi belirtir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+4,Makine performansındaki dalgalanmalar hakkında bilgi açıklayabilir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+4,Makine performansındaki dalgalanmalar hakkında bilgi paylaşır mısın?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+5,01/01/2023–31/12/2023 aralığında makinede kaç kez alarm durumu oluştu verebilir misin?,14351,
+5,01/01/2023–31/12/2023 aralığında makinede kaç kez alarm durumu oluştu söyler misin?,14351,
+5,01/01/2023–31/12/2023 aralığında makinede kaç kez alarm durumu oluştu belirtir misin?,14351,
+5,01/01/2023–31/12/2023 aralığında makinede kaç kez alarm durumu oluştu açıklayabilir misin?,14351,
+5,01/01/2023–31/12/2023 aralığında makinede kaç kez alarm durumu oluştu paylaşır mısın?,14351,
+6,Makine hangi değerlerde sarı alarma geçiyor verebilir misin?,Green: 0–2.8; Yellow: 2.8–11.2; Orange: 11.2–14; Red: 14+ mm/s,
+6,Makine hangi değerlerde sarı alarma geçiyor söyler misin?,Green: 0–2.8; Yellow: 2.8–11.2; Orange: 11.2–14; Red: 14+ mm/s,
+6,Makine hangi değerlerde sarı alarma geçiyor belirtir misin?,Green: 0–2.8; Yellow: 2.8–11.2; Orange: 11.2–14; Red: 14+ mm/s,
+6,Makine hangi değerlerde sarı alarma geçiyor açıklayabilir misin?,14+ mm/s,
+6,Makine hangi değerlerde sarı alarma geçiyor paylaşır mısın?,14+ mm/s,
+7,Makine hangi değerlerde kırmızı alarma geçiyor verebilir misin?,14+ mm/s,
+7,Makine hangi değerlerde kırmızı alarma geçiyor söyler misin?,14+ mm/s,
+7,Makine hangi değerlerde kırmızı alarma geçiyor belirtir misin?,14+ mm/s,
+7,Makine hangi değerlerde kırmızı alarma geçiyor açıklayabilir misin?,14+ mm/s,
+7,Makine hangi değerlerde kırmızı alarma geçiyor paylaşır mısın?,14+ mm/s,
+8,15/02/2023 tarihinde RTF makinesi hangi değer aralığında çalıştı verebilir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+8,15/02/2023 tarihinde RTF makinesi hangi değer aralığında çalıştı söyler misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+8,15/02/2023 tarihinde RTF makinesi hangi değer aralığında çalıştı belirtir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+8,15/02/2023 tarihinde RTF makinesi hangi değer aralığında çalıştı açıklayabilir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+8,15/02/2023 tarihinde RTF makinesi hangi değer aralığında çalıştı paylaşır mısın?,"min=0.00, max=241.18, ort=2.95 mm/s",
+9,15/02/2023 tarihinde RTF makinesinin renk seviyesinde değer gösterdi verebilir misin?,Green,
+9,15/02/2023 tarihinde RTF makinesinin renk seviyesinde değer gösterdi söyler misin?,Green,
+9,15/02/2023 tarihinde RTF makinesinin renk seviyesinde değer gösterdi belirtir misin?,Green,
+9,15/02/2023 tarihinde RTF makinesinin renk seviyesinde değer gösterdi açıklayabilir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+9,15/02/2023 tarihinde RTF makinesinin renk seviyesinde değer gösterdi paylaşır mısın?,"min=0.00, max=241.18, ort=2.95 mm/s",
+10,15/02/2023 tarihinde makine performansı hakkında bilgi alabilir miyim verebilir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+10,15/02/2023 tarihinde makine performansı hakkında bilgi alabilir miyim söyler misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+10,15/02/2023 tarihinde makine performansı hakkında bilgi alabilir miyim belirtir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+10,15/02/2023 tarihinde makine performansı hakkında bilgi alabilir miyim açıklayabilir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+10,15/02/2023 tarihinde makine performansı hakkında bilgi alabilir miyim paylaşır mısın?,"min=0.00, max=241.18, ort=2.95 mm/s",
+11,RTF makinesi hangi 01/06/2023–30/06/2023 aralığında turuncu alarm seviyesinde çalıştı verebilir misin?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+11,RTF makinesi hangi 01/06/2023–30/06/2023 aralığında turuncu alarm seviyesinde çalıştı söyler misin?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+11,RTF makinesi hangi 01/06/2023–30/06/2023 aralığında turuncu alarm seviyesinde çalıştı belirtir misin?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+11,RTF makinesi hangi 01/06/2023–30/06/2023 aralığında turuncu alarm seviyesinde çalıştı açıklayabilir misin?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+11,RTF makinesi hangi 01/06/2023–30/06/2023 aralığında turuncu alarm seviyesinde çalıştı paylaşır mısın?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+12,2023 yılında makine performansı nasıldı verebilir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+12,2023 yılında makine performansı nasıldı söyler misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+12,2023 yılında makine performansı nasıldı belirtir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+12,2023 yılında makine performansı nasıldı açıklayabilir misin?,"min=0.00, max=241.18, ort=2.95 mm/s",
+12,2023 yılında makine performansı nasıldı paylaşır mısın?,"min=0.00, max=241.18, ort=2.95 mm/s",
+13,Son bir yıl içinde makine hangi günlerde tamamen durdu verebilir misin?,,
+13,Son bir yıl içinde makine hangi günlerde tamamen durdu söyler misin?,,
+13,Son bir yıl içinde makine hangi günlerde tamamen durdu belirtir misin?,,
+13,Son bir yıl içinde makine hangi günlerde tamamen durdu açıklayabilir misin?,,
+13,Son bir yıl içinde makine hangi günlerde tamamen durdu paylaşır mısın?,,
+14,Kırmızı seviyede çalıştığı tarihlerde makine tamamen durdu mu verebilir misin?,"2023-05-02, 2023-05-03",
+14,Kırmızı seviyede çalıştığı tarihlerde makine tamamen durdu mu söyler misin?,"2023-05-02, 2023-05-03",
+14,Kırmızı seviyede çalıştığı tarihlerde makine tamamen durdu mu belirtir misin?,"2023-05-02, 2023-05-03",
+14,Kırmızı seviyede çalıştığı tarihlerde makine tamamen durdu mu açıklayabilir misin?,"2023-05-02, 2023-05-03",
+14,Kırmızı seviyede çalıştığı tarihlerde makine tamamen durdu mu paylaşır mısın?,"2023-05-02, 2023-05-03",
+15,15 Ocak 2023’ten itibaren yeşil alarmda çalışılan toplam süre nedir verebilir misin?,12316.93 saat (739016 dakika),
+15,15 Ocak 2023’ten itibaren yeşil alarmda çalışılan toplam süre nedir söyler misin?,12316.93 saat (739016 dakika),
+15,15 Ocak 2023’ten itibaren yeşil alarmda çalışılan toplam süre nedir belirtir misin?,12316.93 saat (739016 dakika),
+15,15 Ocak 2023’ten itibaren yeşil alarmda çalışılan toplam süre nedir açıklayabilir misin?,12316.93 saat (739016 dakika),
+15,15 Ocak 2023’ten itibaren yeşil alarmda çalışılan toplam süre nedir paylaşır mısın?,12316.93 saat (739016 dakika),
+16,Son üç ay içinde sarı alarm seviyesinde çalışılan toplam gün sayısı nedir verebilir misin?,61,
+16,Son üç ay içinde sarı alarm seviyesinde çalışılan toplam gün sayısı nedir söyler misin?,61,
+16,Son üç ay içinde sarı alarm seviyesinde çalışılan toplam gün sayısı nedir belirtir misin?,61,
+16,Son üç ay içinde sarı alarm seviyesinde çalışılan toplam gün sayısı nedir açıklayabilir misin?,61,
+16,Son üç ay içinde sarı alarm seviyesinde çalışılan toplam gün sayısı nedir paylaşır mısın?,61,
+17,Son üç ay içinde turuncu alarm seviyesinde çalışılan toplam gün sayısı nedir verebilir misin?,6,
+17,Son üç ay içinde turuncu alarm seviyesinde çalışılan toplam gün sayısı nedir söyler misin?,6,
+17,Son üç ay içinde turuncu alarm seviyesinde çalışılan toplam gün sayısı nedir belirtir misin?,6,
+17,Son üç ay içinde turuncu alarm seviyesinde çalışılan toplam gün sayısı nedir açıklayabilir misin?,6,
+17,Son üç ay içinde turuncu alarm seviyesinde çalışılan toplam gün sayısı nedir paylaşır mısın?,6,
+18,Son üç ay içinde yeşil alarm seviyesinde çalışılan toplam gün sayısı nedir verebilir misin?,88,
+18,Son üç ay içinde yeşil alarm seviyesinde çalışılan toplam gün sayısı nedir söyler misin?,88,
+18,Son üç ay içinde yeşil alarm seviyesinde çalışılan toplam gün sayısı nedir belirtir misin?,88,
+18,Son üç ay içinde yeşil alarm seviyesinde çalışılan toplam gün sayısı nedir açıklayabilir misin?,88,
+18,Son üç ay içinde yeşil alarm seviyesinde çalışılan toplam gün sayısı nedir paylaşır mısın?,88,
+19,Son üç ay içinde kırmızı alarm seviyesinde çalışılan toplam gün sayısı nedir verebilir misin?,3,
+19,Son üç ay içinde kırmızı alarm seviyesinde çalışılan toplam gün sayısı nedir söyler misin?,3,
+19,Son üç ay içinde kırmızı alarm seviyesinde çalışılan toplam gün sayısı nedir belirtir misin?,3,
+19,Son üç ay içinde kırmızı alarm seviyesinde çalışılan toplam gün sayısı nedir açıklayabilir misin?,3,
+19,Son üç ay içinde kırmızı alarm seviyesinde çalışılan toplam gün sayısı nedir paylaşır mısın?,3,
+20,Yeşil aralıktan direkt olarak kırmızıya geçiş yapan tarihler mevcut mu verebilir misin?,0,
+20,Yeşil aralıktan direkt olarak kırmızıya geçiş yapan tarihler mevcut mu söyler misin?,0,
+20,Yeşil aralıktan direkt olarak kırmızıya geçiş yapan tarihler mevcut mu belirtir misin?,0,
+20,Yeşil aralıktan direkt olarak kırmızıya geçiş yapan tarihler mevcut mu açıklayabilir misin?,0,
+20,Yeşil aralıktan direkt olarak kırmızıya geçiş yapan tarihler mevcut mu paylaşır mısın?,0,
+21,Hangi tarihlerde renk aralıklarının daha düzenli olduğu gözlemlendi verebilir misin?,2023-02-03,
+21,Hangi tarihlerde renk aralıklarının daha düzenli olduğu gözlemlendi söyler misin?,2023-02-03,
+21,Hangi tarihlerde renk aralıklarının daha düzenli olduğu gözlemlendi belirtir misin?,2023-02-03,
+21,Hangi tarihlerde renk aralıklarının daha düzenli olduğu gözlemlendi açıklayabilir misin?,2023-02-03,
+21,Hangi tarihlerde renk aralıklarının daha düzenli olduğu gözlemlendi paylaşır mısın?,2023-02-03,
+22,"Makine, son bir yıl içinde hangi aylarda daha çok yeşil alarm seviyesindeydi verebilir misin?","Yeşil durumun görüldüğü aylar: 2023-01, 2023-02, 2023-03, 2023-04, 2023-05, 2023-06, 2023-07, 2023-08, 2023-09, 2023-10, 2023-11, 2023-12.",
+22,"Makine, son bir yıl içinde hangi aylarda daha çok yeşil alarm seviyesindeydi söyler misin?","Yeşil durumun görüldüğü aylar: 2023-01, 2023-02, 2023-03, 2023-04, 2023-05, 2023-06, 2023-07, 2023-08, 2023-09, 2023-10, 2023-11, 2023-12.",
+22,"Makine, son bir yıl içinde hangi aylarda daha çok yeşil alarm seviyesindeydi belirtir misin?","Yeşil durumun görüldüğü aylar: 2023-01, 2023-02, 2023-03, 2023-04, 2023-05, 2023-06, 2023-07, 2023-08, 2023-09, 2023-10, 2023-11, 2023-12.",
+22,"Makine, son bir yıl içinde hangi aylarda daha çok yeşil alarm seviyesindeydi açıklayabilir misin?","Yeşil durumun görüldüğü aylar: 2023-01, 2023-02, 2023-03, 2023-04, 2023-05, 2023-06, 2023-07, 2023-08, 2023-09, 2023-10, 2023-11, 2023-12.",
+22,"Makine, son bir yıl içinde hangi aylarda daha çok yeşil alarm seviyesindeydi paylaşır mısın?","Yeşil durumun görüldüğü aylar: 2023-01, 2023-02, 2023-03, 2023-04, 2023-05, 2023-06, 2023-07, 2023-08, 2023-09, 2023-10, 2023-11, 2023-12.",
+23,Makine performansının zaman içindeki değişimi ne şekildeydi verebilir misin?,0.00–241.18; ort 2.95,
+23,Makine performansının zaman içindeki değişimi ne şekildeydi söyler misin?,0.00–241.18; ort 2.95,
+23,Makine performansının zaman içindeki değişimi ne şekildeydi belirtir misin?,0.00–241.18; ort 2.95,
+23,Makine performansının zaman içindeki değişimi ne şekildeydi açıklayabilir misin?,0.00–241.18; ort 2.95,
+23,Makine performansının zaman içindeki değişimi ne şekildeydi paylaşır mısın?,0.00–241.18; ort 2.95,
+24,Renk değişimlerinin yoğun olduğu dönemler hangi tarihlerdeydi verebilir misin?,"2023-04-27, 2023-04-28, 2023-10-10",
+24,Renk değişimlerinin yoğun olduğu dönemler hangi tarihlerdeydi söyler misin?,"2023-04-27, 2023-04-28, 2023-10-10",
+24,Renk değişimlerinin yoğun olduğu dönemler hangi tarihlerdeydi belirtir misin?,"2023-04-27, 2023-04-28, 2023-10-10",
+24,Renk değişimlerinin yoğun olduğu dönemler hangi tarihlerdeydi açıklayabilir misin?,"2023-04-27, 2023-04-28, 2023-10-10",
+24,Renk değişimlerinin yoğun olduğu dönemler hangi tarihlerdeydi paylaşır mısın?,"2023-04-27, 2023-04-28, 2023-10-10",
+25,En düşük arıza oranı hangi dönemdeydi verebilir misin?,2023-02-03,
+25,En düşük arıza oranı hangi dönemdeydi söyler misin?,2023-02-03,
+25,En düşük arıza oranı hangi dönemdeydi belirtir misin?,2023-02-03,
+25,En düşük arıza oranı hangi dönemdeydi açıklayabilir misin?,2023-02-03,
+25,En düşük arıza oranı hangi dönemdeydi paylaşır mısın?,2023-02-03,
+26,En fazla performans değişikliği hangi ayda yaşandı verebilir misin?,2023-05,
+26,En fazla performans değişikliği hangi ayda yaşandı söyler misin?,2023-05,
+26,En fazla performans değişikliği hangi ayda yaşandı belirtir misin?,2023-05,
+26,En fazla performans değişikliği hangi ayda yaşandı açıklayabilir misin?,2023-05,
+26,En fazla performans değişikliği hangi ayda yaşandı paylaşır mısın?,0.00–241.18; ort 2.95,
+27,Yıllık performans ortalaması nedir verebilir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+27,Yıllık performans ortalaması nedir söyler misin?,2023:2.95,
+27,Yıllık performans ortalaması nedir belirtir misin?,Değerler 0.00–241.18 mm/s arasında dalgalanmıştır.,
+27,Yıllık performans ortalaması nedir açıklayabilir misin?,2023:2.95,
+27,Yıllık performans ortalaması nedir paylaşır mısın?,2023:2.95,
+28,Makine yeşil seviyeden kırmızı seviyeye ne sıklıkla geçiş yaptı verebilir misin?,0,
+28,Makine yeşil seviyeden kırmızı seviyeye ne sıklıkla geçiş yaptı söyler misin?,0,
+28,Makine yeşil seviyeden kırmızı seviyeye ne sıklıkla geçiş yaptı belirtir misin?,0,
+28,Makine yeşil seviyeden kırmızı seviyeye ne sıklıkla geçiş yaptı açıklayabilir misin?,0,
+28,Makine yeşil seviyeden kırmızı seviyeye ne sıklıkla geçiş yaptı paylaşır mısın?,0,
+29,Son bir ay içinde makinenin hangi renk aralıklarında çalıştığını gösterebilir misin verebilir misin?,"Green, Orange, Red, Yellow",
+29,Son bir ay içinde makinenin hangi renk aralıklarında çalıştığını gösterebilir misin söyler misin?,"Green, Orange, Red, Yellow",
+29,Son bir ay içinde makinenin hangi renk aralıklarında çalıştığını gösterebilir misin belirtir misin?,"Green, Orange, Red, Yellow",
+29,Son bir ay içinde makinenin hangi renk aralıklarında çalıştığını gösterebilir misin açıklayabilir misin?,"Green, Orange, Red, Yellow",
+29,Son bir ay içinde makinenin hangi renk aralıklarında çalıştığını gösterebilir misin paylaşır mısın?,"Green, Orange, Red, Yellow",
+30,Makinenin en yüksek sayısal değerlerde alarm verdiği günler hangileriydi verebilir misin?,Green: 0–2.8; Yellow: 2.8–11.2; Orange: 11.2–14; Red: 14+ mm/s,
+30,Makinenin en yüksek sayısal değerlerde alarm verdiği günler hangileriydi söyler misin?,Green: 0–2.8; Yellow: 2.8–11.2; Orange: 11.2–14; Red: 14+ mm/s,
+30,Makinenin en yüksek sayısal değerlerde alarm verdiği günler hangileriydi belirtir misin?,Green: 0–2.8; Yellow: 2.8–11.2; Orange: 11.2–14; Red: 14+ mm/s,
+30,Makinenin en yüksek sayısal değerlerde alarm verdiği günler hangileriydi açıklayabilir misin?,14+ mm/s,
+30,Makinenin en yüksek sayısal değerlerde alarm verdiği günler hangileriydi paylaşır mısın?,14+ mm/s,
+31,Makine iyileştirme önerileri verebilir misin?,Düzenli bakım ve sensör kalibrasyonu önerilir.,
+31,Makine iyileştirme önerileri söyler misin?,Düzenli bakım ve sensör kalibrasyonu önerilir.,
+31,Makine iyileştirme önerileri belirtir misin?,Düzenli bakım ve sensör kalibrasyonu önerilir.,
+31,Makine iyileştirme önerileri açıklayabilir misin?,"Aşağıda RTF makinesi titreşim verileri var:
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+Tarih: 2023-04-26, Durum: Yellow, Değer: 8.01
+
+Soru: RTF makinesi iyileştirme önerileri açıklayabilir misin?
+Lütfen kısa bir Türkçe cevap verin.",
+31,Makine iyileştirme önerileri paylaşır mısın?,"Aşağıda RTF makinesi titreşim verileri var:
+Tarih: 2023-04-24, Durum: Yellow, Değer: 5.00
+Tarih: 2023-04-24, Durum: Yellow, Değer: 5.00
+Tarih: 2023-04-24, Durum: Yellow, Değer: 5.00
+Tarih: 2023-04-13, Durum: Yellow, Değer: 5.00
+Tarih: 2023-04-15, Durum: Yellow, Değer: 3.00
+Tarih: 2023-04-15, Durum: Yellow, Değer: 3.00
+Tarih: 2023-04-15, Durum: Yellow, Değer: 3.00
+Tarih: 2023-04-15, Durum: Yellow, Değer: 3.00
+
+Soru: RTF makinesi iyileştirme önerileri paylaşır mısın?
+Lütfen kısa bir Türkçe cevap verin.",
+32,Makinenin performansını ne etkiliyor olabilir verebilir misin?,"Faktörler: fan yatak aşınması, balans bozulması, mekanik gevşeme.",
+32,Makinenin performansını ne etkiliyor olabilir söyler misin?,"Faktörler: fan yatak aşınması, balans bozulması, mekanik gevşeme.",
+32,Makinenin performansını ne etkiliyor olabilir belirtir misin?,"Faktörler: fan yatak aşınması, balans bozulması, mekanik gevşeme.",
+32,Makinenin performansını ne etkiliyor olabilir açıklayabilir misin?,"Faktörler: fan yatak aşınması, balans bozulması, mekanik gevşeme.",
+32,Makinenin performansını ne etkiliyor olabilir paylaşır mısın?,"Faktörler: fan yatak aşınması, balans bozulması, mekanik gevşeme.",
+33,Geçen yıl hangi aylarda makine kırmızı alarm verdi?,"Kırmızı durumun görüldüğü aylar: 2023-01, 2023-04, 2023-05, 2023-07, 2023-10, 2023-12.",
+33,"Makine, 2023'ün ilk 6 ayında kaç ay boyunca yeşil alarm seviyesinde çalıştı?",Makine 12 ay boyunca yeşil durum göstermiştir.,
+33,Son 4 ayda turuncu alarm seviyesinin görüldüğü aylar hangileri?,6,
+33,Mart 2023'te makine hangi alarm seviyelerinde çalıştı?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+33,Makine hangi aylarda hiç kırmızı durum göstermedi?,"Kırmızı durumun görüldüğü aylar: 2023-01, 2023-04, 2023-05, 2023-07, 2023-10, 2023-12.",
+33,Temmuz 2023'ün kaç ayında sarı durum hâkimdi?,"min=0.00, max=241.18, ort=2.95 mm/s",
+33,2022–2023 kış aylarında makine performansı nasıldı?,"min=0.00, max=241.18, ort=2.95 mm/s",
+34,Makine en son hangi tarihte kırmızı değerler verdi?,,
+34,Son 10 günde kaç gün makine turuncu alarm seviyesindeydi?,6,
+34,15/02/2023–15/03/2023 tarihleri arasında makine kaç gün tamamen durdu?,14351,
+34,Günlük bazda en düşük titreşim değeri hangi tarihte ölçüldü?,"2023-01-24, 2023-01-25, 2023-04-25",
+34,Geçen haftanın en sarı alarm günleri hangileriydi?,14+ mm/s,
+34,"Geçen ayın 5, 10 ve 20'sinde makine hangi renk seviyesindeydi?","Aşağıda RTF makinesi titreşim verileri var:
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.85
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+Tarih: 2023-10-04, Durum: Yellow, Değer: 5.00
+
+Soru: Geçen ayın 5, 10 ve 20'sinde RTF makinesi hangi renk seviyesindeydi?
+Lütfen kısa bir Türkçe cevap verin.",
+34,Makine 2023-04-27 tarihinde arıza yaptı mı?,"2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+35,"Makine, 14 mm/s üzeri değerlerde kaç kez kırmızı alarma geçti?","2023-01-31, 2023-04-25, 2023-04-26, 2023-04-27, 2023-04-28, 2023-04-29, 2023-04-30, 2023-05-01, 2023-05-04, 2023-07-02, 2023-07-03, 2023-07-24, 2023-10-04, 2023-10-05, 2023-10-06, 2023-11-21, 2023-11-26, 2023-12-10",
+35,Toplam kaç kez sarı alarm seviyesine iniş-çıkış oldu?,2023-05-03,
+35,Makine performansındaki dalgalanma (max–min) değeri nedir?,0.00–241.18; ort 2.95,
+35,Yeşil alandan doğrudan kırmızıya kaç kez geçiş oldu?,0,
+35,Turuncu seviyede arıza riski kaç sefer görüldü?,6,
+35,Makine en uzun süre hangi renk seviyesinde kaldı?,"Aşağıda RTF makinesi titreşim verileri var:
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-02, Durum: Yellow, Değer: 9.11
+Tarih: 2023-07-03, Durum: Yellow, Değer: 9.11
+
+Soru: RTF makinesi en uzun süre hangi renk seviyesinde kaldı?
+Lütfen kısa bir Türkçe cevap verin.",
+35,Sarı alarm seviyesinde kaç saat çalıştı?,2023-05-03,

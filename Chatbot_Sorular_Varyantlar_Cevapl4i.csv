@@ -172,7 +172,7 @@ Soru No,Soru,Cevap,Doğru Cevap
 34,Günlük bazda en düşük titreşim değeri hangi tarihte ölçüldü?,13:00,
 34,Geçen haftanın en sarı alarm günleri hangileriydi?,Wednesday,
 34,"Geçen ayın 5, 10 ve 20'sinde makine hangi renk seviyesindeydi?",Red: 11.45 saat,
-34,Makine 2023-04-27 tarihinde arıza yaptı mı?,2023-04-27 tarihinde değerler 7.14–18.51 mm/s arasında dalgalanmıştır.,
+34,Makine 2023-04-27 tarihinde arıza yaptı mı?,2023-04-27: 7.14–18.51 mm/s,
 35,"Makine, 14 mm/s üzeri değerlerde kaç kez kırmızı alarma geçti?","ERROR: The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().",
 35,Toplam kaç kez sarı alarm seviyesine iniş-çıkış oldu?,239.18 saat (14351 dakika),
 35,Makine performansındaki dalgalanma (max–min) değeri nedir?,0.00–241.18; ort 2.95,
