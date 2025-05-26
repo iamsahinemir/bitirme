@@ -1,4 +1,7 @@
 import gradio as gr
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.ensemble import IsolationForest
 from datetime import datetime
 import json
 import os
@@ -6,7 +9,7 @@ import os
 chat_histories = {}
 MAX_BUTTONS = 30
 
-# JSON dosyasına kayıt ve yükleme
+# ------------------------------ Chat Fonksiyonları ------------------------------
 def save_chat_histories():
     with open("chat_histories.json", "w", encoding="utf-8") as f:
         json.dump(chat_histories, f, ensure_ascii=False, indent=2)
@@ -41,7 +44,6 @@ def new_chat():
     return sohbetler, [], "", new_id
 
 def load_chat(selected_id):
-    # Update the rename input field with current chat name
     return chat_histories.get(selected_id, []), "", selected_id, selected_id
 
 def temizle_sohbet(history_id):
@@ -51,14 +53,13 @@ def temizle_sohbet(history_id):
     return [], "", history_id
 
 def sil_sohbet(sil_id):
+    mesaj = ""
     if sil_id in chat_histories:
         del chat_histories[sil_id]
         save_chat_histories()
-        # Force save and reload to persist changes
-        load_chat_histories()  
+        mesaj = f"🗑️ '{sil_id}' başarıyla silindi."
     sohbetler = list(chat_histories.keys())
-    return sohbetler, [], ""
-
+    return sohbetler, [], "", mesaj
 
 def yeniden_adlandir(onceki_id, yeni_id):
     if onceki_id in chat_histories and yeni_id:
@@ -74,123 +75,157 @@ def update_sidebar(sohbet_ids):
         for i in range(MAX_BUTTONS)
     ]
 
+# ------------------------------ Grafik Fonksiyonları ------------------------------
+def load_and_process_data():
+    df = pd.read_csv("vibration_df.csv")
+    df['Timestamp'] = pd.to_datetime(df['Timestamp'], errors='coerce')
+    if pd.api.types.is_datetime64tz_dtype(df['Timestamp'].dtype):
+        df['Timestamp'] = df['Timestamp'].dt.tz_convert(None)
+    df.dropna(subset=['Timestamp'], inplace=True)
+    df['Value'] = pd.to_numeric(df['Value'], errors='coerce')
+    df.dropna(subset=['Value'], inplace=True)
+    df.sort_values('Timestamp', inplace=True)
+    return df
+
+def get_color(v):
+    if v < 2.8: return 'green'
+    if v < 11.2: return 'yellow'
+    if v < 14: return 'orange'
+    return 'red'
+
+def plot_graphs(start_date, end_date):
+    try:
+        start = datetime.strptime(start_date, "%Y-%m-%d")
+        end = datetime.strptime(end_date, "%Y-%m-%d")
+    except ValueError:
+        return "❌ Lütfen tarihi 'YYYY-MM-DD' formatında giriniz.", None
+
+    # Geçerli veri aralığı
+    min_date = datetime(2023, 1, 8)
+    max_date = datetime(2023, 12, 23)
+
+    if start > end:
+        return "❌ Başlangıç tarihi, bitiş tarihinden sonra olamaz.", None
+    if start < min_date or end > max_date:
+        return f"❌ Tarih aralığı {min_date.date()} ile {max_date.date()} arasında olmalıdır.", None
+
+    df = load_and_process_data()
+    end += pd.Timedelta(days=1) - pd.Timedelta(seconds=1)
+    filtered = df[(df['Timestamp'] >= start) & (df['Timestamp'] <= end)].copy()
+
+    if filtered.empty:
+        return "⚠️ Seçilen tarih aralığında veri bulunamadı.", None
+
+    filtered['Color'] = filtered['Value'].apply(get_color)
+    model = IsolationForest(contamination=0.01, random_state=42)
+    filtered['Anomaly'] = model.fit_predict(filtered[['Value']])
+    filtered['AnomalyColor'] = filtered['Anomaly'].map({1: 'blue', -1: 'red'})
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.scatter(filtered['Timestamp'], filtered['Value'], c=filtered['AnomalyColor'])
+    ax.set_title("Anomali Tespiti - Hız")
+    ax.set_ylabel("mm/s")
+    ax.set_xlabel("Zaman")
+
+    return "✅ Grafik oluşturuldu.", fig
+
+
+# ------------------------------ Arayüz ------------------------------
 load_chat_histories()
 
-demo = gr.Blocks(
-    css="""
-body.dark {
-    background-color: #0f0f0f !important;
-    color: white !important;
-}
-body.light {
-    background-color: white !important;
-    color: black !important;
-}
-#sidebar-scroll {
-    max-height: 520px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #555 #1e1e1e;
-}
-#sidebar-scroll::-webkit-scrollbar {
-    width: 8px;
-}
-#sidebar-scroll::-webkit-scrollbar-track {
-    background: #1e1e1e;
-}
-#sidebar-scroll::-webkit-scrollbar-thumb {
-    background-color: #555;
+with gr.Blocks(css="""
+.sidebar-btn { margin-bottom: 4px; border-radius: 6px; text-align: left; padding: 8px; background-color: #1e1e1e; color: white; border: 1px solid #444; }
+.sidebar-btn:hover { background-color: #333; cursor: pointer; }
+.rename-panel { display: flex; gap: 5px; margin-top: 10px; }
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
     border-radius: 6px;
-    border: 2px solid #1e1e1e;
-}
-.sidebar-btn {
-    margin-bottom: 4px;
-    border-radius: 6px;
-    text-align: left;
-    padding: 8px;
-    background-color: #1e1e1e;
-    color: white;
-    border: 1px solid #444;
-}
-.sidebar-btn:hover {
-    background-color: #333;
-    cursor: pointer;
-}
-.rename-panel {
-    display: flex;
-    gap: 5px;
     margin-top: 10px;
 }
-"""
-)
 
-with demo:
-    gr.Markdown("<script>document.body.classList.add('dark');</script>")
-    gr.Markdown("## 🤖 Makine Titreşim Asistanı\nGPT benzeri sohbet deneyimi yaşayın.")
+""") as demo:
 
-    with gr.Row():
-        with gr.Column(scale=2):
+    with gr.Tabs():
+        with gr.Tab("💬 Sohbet"):
+            gr.Markdown("## 🤖 Makine Titreşim Asistanı")
+
             with gr.Row():
-                yeni_btn = gr.Button("➕ Yeni Sohbet")
-                tema_html = gr.HTML("""
-                    <button onclick="
+                with gr.Column(scale=2):
+                    yeni_btn = gr.Button("➕ Yeni Sohbet")
+                    tema_html = gr.HTML("""<button onclick="
                         const b = document.body;
                         b.classList.toggle('dark');
                         b.classList.toggle('light');
-                    "
-                    style='padding:8px;border-radius:6px;background:#222;color:white;border:1px solid #444;'>
-                        🌙 Tema Değiştir
-                    </button>
-                """)
+                    " style='padding:8px;border-radius:6px;background:#222;color:white;border:1px solid #444;'>🌙 Tema Değiştir</button>""")
 
-            with gr.Column(elem_id="sidebar-scroll"):
-                sohbet_buttons = [gr.Button(visible=False, elem_classes="sidebar-btn") for _ in range(MAX_BUTTONS)]
+                    sohbet_buttons = [gr.Button(visible=False, elem_classes="sidebar-btn") for _ in range(MAX_BUTTONS)]
 
-        with gr.Column(scale=8):
-            sohbet_ekrani = gr.Chatbot(label="Sohbet", show_copy_button=True, type="messages")
-            mesaj_kutusu = gr.Textbox(placeholder="Bir mesaj yazın...", show_label=False)
-            gonder_btn = gr.Button("Gönder")
-            temizle_btn = gr.Button("Temizle")
+                with gr.Column(scale=8):
+                    sohbet_ekrani = gr.Chatbot(label="Sohbet", show_copy_button=True, type="messages")
+                    mesaj_kutusu = gr.Textbox(placeholder="Bir mesaj yazın...", show_label=False)
+                    gonder_btn = gr.Button("Gönder")
+                    temizle_btn = gr.Button("Temizle")
 
-            gr.Markdown("### Seçilen Sohbet İşlemleri")
-            with gr.Row(elem_classes="rename-panel"):
-                ad_input = gr.Textbox(label="Yeni Ad", scale=2)
-                ad_btn = gr.Button("✏️ Adı Güncelle", scale=1)
-                sil_btn = gr.Button("🗑️ Sil", scale=1)
+                    gr.Markdown("### Seçilen Sohbet İşlemleri")
+                    alert_kutusu = gr.Markdown("", elem_classes="alert-danger", visible=False)
+                    with gr.Row(elem_classes="rename-panel"):
+                        ad_input = gr.Textbox(label="Yeni Ad", scale=2)
+                        ad_btn = gr.Button("✏️ Adı Güncelle", scale=1)
+                        sil_btn = gr.Button("🔚 Sil", scale=1)
 
-    secili_sohbet = gr.State("")
-    sohbet_id_listesi = gr.State(list(chat_histories.keys()))
+                    secili_sohbet = gr.State("")
+                    sohbet_id_listesi = gr.State(list(chat_histories.keys()))
 
-    yeni_btn.click(fn=new_chat,
-                   outputs=[sohbet_id_listesi, sohbet_ekrani, mesaj_kutusu, secili_sohbet])\
-        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
+                    demo.load(fn=lambda: update_sidebar(list(chat_histories.keys())), outputs=sohbet_buttons)
 
-    gonder_btn.click(fn=submit_message,
-                     inputs=[mesaj_kutusu, secili_sohbet],
-                     outputs=[sohbet_ekrani, mesaj_kutusu, sohbet_id_listesi, secili_sohbet])\
-        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
+                    yeni_btn.click(fn=new_chat,
+                                   outputs=[sohbet_id_listesi, sohbet_ekrani, mesaj_kutusu, secili_sohbet])\
+                        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
 
-    mesaj_kutusu.submit(fn=submit_message,
-                        inputs=[mesaj_kutusu, secili_sohbet],
-                        outputs=[sohbet_ekrani, mesaj_kutusu, sohbet_id_listesi, secili_sohbet])\
-        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
+                    gonder_btn.click(fn=submit_message,
+                                     inputs=[mesaj_kutusu, secili_sohbet],
+                                     outputs=[sohbet_ekrani, mesaj_kutusu, sohbet_id_listesi, secili_sohbet])\
+                        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
 
-    temizle_btn.click(fn=temizle_sohbet,
-                      inputs=[secili_sohbet],
-                      outputs=[sohbet_ekrani, mesaj_kutusu, secili_sohbet])
+                    mesaj_kutusu.submit(fn=submit_message,
+                                        inputs=[mesaj_kutusu, secili_sohbet],
+                                        outputs=[sohbet_ekrani, mesaj_kutusu, sohbet_id_listesi, secili_sohbet])\
+                        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
 
-    sil_btn.click(fn=sil_sohbet, inputs=[secili_sohbet],
-                  outputs=[sohbet_id_listesi, sohbet_ekrani, secili_sohbet])\
-        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
+                    temizle_btn.click(fn=temizle_sohbet,
+                                      inputs=[secili_sohbet],
+                                      outputs=[sohbet_ekrani, mesaj_kutusu, secili_sohbet])
 
-    ad_btn.click(fn=yeniden_adlandir,
-                 inputs=[secili_sohbet, ad_input],
-                 outputs=[sohbet_id_listesi, sohbet_ekrani, secili_sohbet])\
-        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
+                    sil_btn.click(fn=sil_sohbet,
+              inputs=[secili_sohbet],
+              outputs=[sohbet_id_listesi, sohbet_ekrani, secili_sohbet, alert_kutusu])\
+    .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)\
+    .then(lambda: gr.update(visible=True), outputs=alert_kutusu)\
+    .then(lambda: "", outputs=ad_input)  # 🛠️ Ad input temizlensin
 
-    for btn in sohbet_buttons:
-        btn.click(fn=load_chat, inputs=[btn],
-                  outputs=[sohbet_ekrani, mesaj_kutusu, secili_sohbet, ad_input])  # Add ad_input to outputs
+
+                    ad_btn.click(fn=yeniden_adlandir,
+                                 inputs=[secili_sohbet, ad_input],
+                                 outputs=[sohbet_id_listesi, sohbet_ekrani, secili_sohbet])\
+                        .then(fn=update_sidebar, inputs=[sohbet_id_listesi], outputs=sohbet_buttons)
+
+                    for btn in sohbet_buttons:
+                        btn.click(fn=load_chat,
+                                  inputs=[btn],
+                                  outputs=[sohbet_ekrani, mesaj_kutusu, secili_sohbet, ad_input])
+
+        with gr.Tab("📊 Anomali Görselleştirme"):
+            gr.Markdown("### 📈 Titreşim Anomali Grafiği ve Durumlar")
+            gr.Image("rtfmachine.gif", width=300)
+            with gr.Row():
+                start_date = gr.Textbox(label="Başlangıç Tarihi", placeholder="2023-01-01")
+                end_date = gr.Textbox(label="Bitiş Tarihi", placeholder="2023-12-31")
+            plot_btn = gr.Button("🔍 Anomali Göster")
+            durum = gr.Textbox(label="Durum")
+            grafik = gr.Plot()
+            plot_btn.click(fn=plot_graphs, inputs=[start_date, end_date], outputs=[durum, grafik])
 
 demo.launch()
-# sil butonu anlık siliyor, sayfa yenilendiğinde geri geliyor
